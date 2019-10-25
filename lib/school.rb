@@ -10,10 +10,13 @@ class School
   end
   
   
-  def add_student(grade, name)
-    @roster.each do |grade, name|
-      @roster[grade] = name.sort
-  end
+  def add_student(name, grade)
+    if roster.include?(grade)
+      roster[grade] << name
+    else
+    roster[grade] = []
+    roster[grade] << name
+    end
   end
   
 end
