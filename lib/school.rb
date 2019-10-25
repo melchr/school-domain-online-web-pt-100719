@@ -19,9 +19,9 @@ class School
   end
   
   def grade(number)
-    @roster.each do |grade, student|
+    @roster.each do |grade, student_name|
       if number == grade
-        return student
+        return student_name
       end
     end
   end
