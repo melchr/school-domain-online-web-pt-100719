@@ -18,6 +18,14 @@ class School
     end
   end
   
+  def grade(number)
+    @roster.each do |grade, student|
+      if number == grade
+        return student
+      end
+    end
+  end
+  
   def sort
     new_hash = {}
     @roster.each do |grade, student|
